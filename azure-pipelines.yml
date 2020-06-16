@@ -6,17 +6,25 @@
 trigger:
 - master
 
-variables:
-- group: ${{group_name}}
+parameters:
+- name: deploymentVariableLibraries
+  type: object
+  default:
+      group: $(group_name)
 
-pool:
-  vmImage: 'ubuntu-latest'
+jobs:
+ - job: Test
+   variables:
+   - group: ${{parameters.deploymentVariableLibraries.group}}
 
-steps:
-- script: echo Hello, world! $(var1) $(var2) $(variablegroups.terraform_variable_group.env) $(account)
-  displayName: 'Run a one-line script'
+   pool:
+     vmImage: 'ubuntu-latest'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+   steps:
+    - script: echo Hello, world! $(var1) $(var2) $(variablegroups.terraform_variable_group.env) $(account)
+      displayName: 'Run a one-line script'
+
+    - script: |
+       echo Add other tasks to build, test, and deploy your project.
+       echo See https://aka.ms/yaml
+       displayName: 'Run a multi-line script'
