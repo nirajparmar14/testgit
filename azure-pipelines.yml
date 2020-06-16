@@ -5,12 +5,15 @@
 
 trigger:
 - master
+variables:
+- name: one
+  value: test123 
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world! $(var1) $(var2)
+- script: echo Hello, world! $(var1)  $(one)
   displayName: 'Run a one-line script'
 
 - script: |
