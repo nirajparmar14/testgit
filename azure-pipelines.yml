@@ -6,6 +6,8 @@
 trigger:
 - master
 
+variables:
+- group: ${{group_name}}
 
 pool:
   vmImage: 'ubuntu-latest'
