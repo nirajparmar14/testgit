@@ -7,7 +7,7 @@ trigger:
 - master
 
 variables:
-- group: $(group_name)
+- group: terraform_variable_group
 
 pool:
   vmImage: 'ubuntu-latest'
