@@ -8,8 +8,6 @@ trigger:
 
 jobs:
  - job: Test
-   variables:
-   - group: ${{parameters.deploymentVariableLibraries.group}}
 
    pool: niraj_agent
 
