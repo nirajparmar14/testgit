@@ -6,22 +6,15 @@
 trigger:
 - master
 
-parameters:
-- name: deploymentVariableLibraries
-  type: object
-  default:
-      group: $(group_name)
-
 jobs:
  - job: Test
    variables:
    - group: ${{parameters.deploymentVariableLibraries.group}}
 
-   pool:
-     vmImage: 'ubuntu-latest'
+   pool: niraj_agent
 
    steps:
-    - script: echo Hello, world! $(var1) $(var2) $(variablegroups.terraform_variable_group.env) $(account)
+    - script: echo Hello, world! 
       displayName: 'Run a one-line script'
 
     - script: |
