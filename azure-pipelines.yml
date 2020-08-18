@@ -6,6 +6,15 @@
 trigger:
 - master
 
+parameters:
+  - name: Testing
+    displayName: Testing attributes
+    type: string
+    values:
+    - ABC
+    - DEF
+    default: ABC
+
 jobs:
  - job: Test
 
