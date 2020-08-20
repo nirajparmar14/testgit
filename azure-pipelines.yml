@@ -6,6 +6,9 @@
 trigger:
 - master
 
+variables:
+- group: niraj-vg
+
 parameters:
   - name: Testing
     displayName: Testing attributes
