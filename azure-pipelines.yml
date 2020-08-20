@@ -7,7 +7,7 @@ trigger:
 - master
 
 variables:
-- group: niraj-vg
+- group: niraj_vg
 
 parameters:
   - name: Testing
