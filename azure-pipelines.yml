@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- none
 
 variables:
 - group: niraj_vg
@@ -28,5 +28,6 @@ jobs:
       displayName: 'Run a one-line script'
 
     - script: |
+       bash test.sh
        echo Add other tasks to build, test, and deploy your project.
        echo See https://aka.ms/yaml
