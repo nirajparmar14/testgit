@@ -1,2 +1,2 @@
 echo "In Script"
-echo $Build.BuildNumber
+echo ${Build.BuildNumber}
