@@ -28,6 +28,8 @@ jobs:
       displayName: 'Run a one-line script'
 
     - script: |
-       bash test.sh
+       pwd
+       echo "AFter PWD"
+       ll
        echo Add other tasks to build, test, and deploy your project.
        echo See https://aka.ms/yaml
