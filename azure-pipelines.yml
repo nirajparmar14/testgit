@@ -6,6 +6,7 @@
 trigger:
 - none
 
+
 variables:
 - group: niraj_vg
 
@@ -17,12 +18,22 @@ parameters:
     - ABC
     - DEF
     default: ABC
+  - name: SelfHostedAgentName
+    displayName: Agent Pool Machines
+    type: string
+    default: agent6
+    values:
+    - agent5
+    - agent6
+    - agent7
 
 jobs:
  - job: Test
 
-   pool: niraj_agent
-
+   pool: 
+     name: niraj_agent
+     demands: ${{ parameters.SelfHostedAgentName }}
+   
    steps:
     - script: echo Hello, world! 
       displayName: 'Run a one-line script'
