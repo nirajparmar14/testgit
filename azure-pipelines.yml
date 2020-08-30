@@ -32,8 +32,9 @@ jobs:
 
    pool: 
      name: niraj_agent
-     demands: ${{ parameters.SelfHostedAgentName }}
-   
+     demands: 
+       - Agent.Name -equals ${{ parameters.SelfHostedAgentName }}
+      
    steps:
     - script: echo Hello, world! 
       displayName: 'Run a one-line script'
