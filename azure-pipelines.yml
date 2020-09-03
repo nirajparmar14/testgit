@@ -34,7 +34,7 @@ jobs:
      name: niraj_agent
      demands: 
        - Agent.Name -equals ${{ parameters.SelfHostedAgentName }}
-   cancelTimeoutInMinutes: 1 
+   cancelTimeoutInMinutes: 3
    timeoutInMinutes: 15 
    steps:
     - script: echo Hello, world! 
