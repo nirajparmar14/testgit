@@ -50,7 +50,7 @@ jobs:
     - task: PythonScript@0
       inputs:
         scriptSource: 'filePath'
-        scriptPath: 'scripts/backup_output_notify.py'
+        scriptPath: 'test.py'
         arguments: $(testbas.MORN)
         failOnStderr: true
       condition: always()
