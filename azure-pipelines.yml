@@ -45,9 +45,12 @@ jobs:
         filePath: 'test.sh'
         failOnStderr: true
       enabled: true
+      name: testbas
 
-    - task: Bash@3
+    - task: PythonScript@0
       inputs:
-        filePath: 'test1.sh'
-      enabled: true
+        scriptSource: 'filePath'
+        scriptPath: 'scripts/backup_output_notify.py'
+        arguments: $(testbas.MORN)
+        failOnStderr: true
       condition: always()
