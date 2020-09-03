@@ -40,16 +40,7 @@ jobs:
     - script: echo Hello, world! 
       displayName: 'Run a one-line script'
 
-
     - task: Bash@3
       inputs:
-        targetType: 'inline'
-        script: |
-          # Write your commands here      
-          pwd
-          echo "AFter PWD"
-          ls -l
-          sleep 10m
-          echo Add other tasks to build, test, and deploy your project.
-          echo "See https://aka.ms/yaml"
+        filePath: 'test.sh'
       enabled: true
