@@ -21,10 +21,10 @@ parameters:
   - name: SelfHostedAgentName
     displayName: Agent Pool Machines
     type: string
-    default: agent6
+    default: agent8
     values:
-    - agent5
-    - agent6
+    - agent8
+    - agent10
     - agent7
 
 jobs:
@@ -34,7 +34,7 @@ jobs:
      name: niraj_agent
      demands: 
        - Agent.Name -equals ${{ parameters.SelfHostedAgentName }}
-      
+   cancelTimeoutInMinutes: 10  
    steps:
     - script: echo Hello, world! 
       displayName: 'Run a one-line script'
@@ -42,6 +42,7 @@ jobs:
     - script: |
        pwd
        echo "AFter PWD"
-       ll
+       ls -l
+       sleep 10m
        echo Add other tasks to build, test, and deploy your project.
        echo See https://aka.ms/yaml
