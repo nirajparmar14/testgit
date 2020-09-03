@@ -50,4 +50,4 @@ jobs:
       inputs:
         filePath: 'test1.sh'
       enabled: true
-      condition: or(always(),successOrFailure())
+      condition: always()
