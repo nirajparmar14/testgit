@@ -48,6 +48,6 @@ jobs:
 
     - task: Bash@3
       inputs:
-        filePath: 'test.sh'
+        filePath: 'test1.sh'
       enabled: true
       condition: always()
