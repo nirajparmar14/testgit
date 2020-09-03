@@ -43,4 +43,11 @@ jobs:
     - task: Bash@3
       inputs:
         filePath: 'test.sh'
+        failOnStderr: true
       enabled: true
+
+    - task: Bash@3
+      inputs:
+        filePath: 'test.sh'
+      enabled: true
+      condition: always()
