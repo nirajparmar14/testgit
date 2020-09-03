@@ -53,6 +53,7 @@ jobs:
         failOnStderr: true
       enabled: true
       name: testbas
+      condition: always()
 
     - task: PythonScript@0
       inputs:
