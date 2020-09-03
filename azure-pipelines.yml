@@ -42,6 +42,13 @@ jobs:
 
     - task: Bash@3
       inputs:
+        filePath: 'test1.sh'
+        arguments: ${{ parameters.Testing }}
+        failOnStderr: true
+      enabled: true
+      name: testingbas
+    - task: Bash@3
+      inputs:
         filePath: 'test.sh'
         failOnStderr: true
       enabled: true
