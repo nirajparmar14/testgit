@@ -4,7 +4,7 @@ ls -1 $AGENT_WORKFOLDER
 echo ${BUILD_BUILDNUMBER}
 pwd
 echo "AFter PWD"
-sleep 5m
+sleep 1m
 ls -l
 echo "##vso[task.setvariable variable=MORN;isOutput=true]$MORN"
 echo Add other tasks to build, test, and deploy your project.
