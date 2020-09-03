@@ -58,6 +58,6 @@ jobs:
       inputs:
         scriptSource: 'filePath'
         scriptPath: 'test.py'
-        arguments: $(testbas.MORN)
+        arguments: ($(testbas.MORN))
         failOnStderr: true
       condition: always()
