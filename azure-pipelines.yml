@@ -53,6 +53,7 @@ jobs:
         failOnStderr: true
       enabled: true
       name: Bash2
+      condition: always()
 
     - task: PythonScript@0
       inputs:
@@ -60,3 +61,4 @@ jobs:
         scriptPath: 'test.py'
         arguments: ($(testbas.MORN))
         failOnStderr: true
+      condition: always()
